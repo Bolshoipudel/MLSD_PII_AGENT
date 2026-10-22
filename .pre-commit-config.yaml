@@ -1,0 +1,19 @@
+repos:
+  # Набор простых универсальных проверок от авторов pre-commit
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0                       # версия (git-тег) этого набора
+    hooks:
+      - id: trailing-whitespace       # убирает пробелы в конце строк
+      - id: end-of-file-fixer         # оставляет в конце файла ровно один перевод строки
+      - id: check-yaml                # проверяет, что YAML-файлы корректны
+      - id: check-toml                # то же для pyproject.toml
+      - id: check-added-large-files   # не даёт закоммитить большой файл (например, датасет)
+      - id: detect-private-key        # не даёт закоммитить приватный ключ
+
+  # ruff: линтер и форматтер
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.1                      # совпадает с вашим ruff 0.17.1
+    hooks:
+      - id: ruff-check                # линтер, правила берёт из pyproject.toml
+        args: [--fix]                 # автоет
+      - id: ruff-format               # форматтер
