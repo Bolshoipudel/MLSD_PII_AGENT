@@ -33,13 +33,15 @@ pyproject.toml                 метаданные проекта, зависи
 
 ## Как запустить у себя
 
-Нужны Python 3.12 или новее и pip 25.1 или новее (для установки групп зависимостей).
+Нужен [uv](https://docs.astral.sh/uv/getting-started/installation/). Подходящую версию Python (3.12 или новее) uv при необходимости скачает сам.
 
 ```bash
 git clone https://github.com/Bolshoipudel/MLSD_PII_AGENT.git
 cd MLSD_PII_AGENT
-pip install --group dev
-pre-commit install
+uv sync
+uv run pre-commit install
 ```
 
-Проверить весь репозиторий: `pre-commit run --all-files`. Запустить линтер и форматтер вручную: `ruff check .` и `ruff format .`.
+`uv sync` создаёт окружение `.venv` и ставит в него зависимости проекта вместе с группой `dev` (ruff, pre-commit).
+
+Проверить весь репозиторий: `uv run pre-commit run --all-files`. Запустить линтер и форматтер вручную: `uv run ruff check .` и `uv run ruff format .`.
