@@ -43,8 +43,8 @@ pyproject.toml                 метаданные проекта, зависи
 Нужны Python 3.12 или новее и pip 25.1 или новее (для установки групп зависимостей).
 
 ```bash
-git clone https://github.com/Bolshoipudel/itmo-mlsd-course-Orlov.git
-cd itmo-mlsd-course-Orlov
+git clone https://github.com/Bolshoipudel/MLSD_PII_AGENT.git
+cd MLSD_PII_AGENT
 pip install --group dev
 pre-commit install
 ```
