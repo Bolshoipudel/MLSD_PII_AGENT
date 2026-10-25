@@ -42,6 +42,4 @@ uv sync
 uv run pre-commit install
 ```
 
-`uv sync` создаёт окружение `.venv` и ставит в него зависимости проекта вместе с группой `dev` (ruff, pre-commit).
-
 Проверить весь репозиторий: `uv run pre-commit run --all-files`. Запустить линтер и форматтер вручную: `uv run ruff check .` и `uv run ruff format .`.
