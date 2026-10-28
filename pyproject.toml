@@ -1,0 +1,20 @@
+[project]
+name = "self-improving-pii-detection"
+version = "0.1.0"
+description = "Локальный агент, который находит причины ошибок детектора ПД и исправляет их через политику детектора"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff==0.17.1",
+    "pre-commit==4.7.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
