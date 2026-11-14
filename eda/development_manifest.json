@@ -1,0 +1,78 @@
+{
+  "algorithm": "grouped_masked_char5_jaccard_0.85_balanced_v1",
+  "checks": {
+    "entities": 5614,
+    "grouping": {
+      "algorithm": "grouped_masked_char5_jaccard_0.85_balanced_v1",
+      "groups": 2687,
+      "largest_group": 10,
+      "matched_edges": {
+        "masked_template": 143,
+        "near_template": 11
+      },
+      "multi_record_groups": 113,
+      "records_in_multi_record_groups": 267,
+      "semantic_independence_verified": false
+    },
+    "id_overlap": 0,
+    "normalized_text_overlap": 0,
+    "records": 2841,
+    "sizes": {
+      "golden": 863,
+      "opt_train": 1978
+    },
+    "template_group_overlap": 0
+  },
+  "code_hash_policy": "SHA-256 of UTF-8 Python source with LF newlines",
+  "code_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audit.py": "632dc8cac8bae7a77b1199efe46ff671177c953d45894f618e3b1d5f988b1ab3",
+    "download.py": "dacb9acb6add037e6f9d7e63f4438f46d770ad4d15004423a4fe121d55bdfca3",
+    "eda.py": "eaa6bab6bd57aca25291c6dc40804109034cfcfbe9efb81012dcebe1aa1ea683",
+    "normalize.py": "2fc48da342f27fe9e106aac2652c8310b28c7e90e875e536b020b9b93bf35c8c",
+    "prepare.py": "45c0001be5e8019aa11357c430ab9be305154c0b0f6b12bacf773dee0a1674d0",
+    "run_notebook.py": "f8537e4d4d612b7f0b377664983ea011d1071a72d45cf431e6b1e908bfd16dfd",
+    "sources.py": "84045e8710f16f85ffd5ddf7829bb1b0f7552c7d0a76652e313196a018d1b0f8",
+    "split.py": "d94ba17adba1a342a4e02e617de8e355c4ee30f1336abc435026aa6f01a02344",
+    "verify.py": "67b96bdf737b5564fb5e4ea6b1aaa9b52bb880b84a305fb65453cad44ca557ad"
+  },
+  "environment": {
+    "packages": {
+      "numpy": "2.5.4",
+      "pyarrow": "26.0.1"
+    },
+    "python": "3.12.3"
+  },
+  "metadata_sha256": {
+    "development_corrections.json": "f29d4033cb9dc827e00c081fc59ac95270aeca2d2e15b2c845d37bb5bec0274e",
+    "development_summary.json": "ee8f7e55465b24e0e1b10e1953e4b125498ceebfd34e2c176a37fd7e555619d2"
+  },
+  "outputs": {
+    "golden.jsonl": {
+      "bytes": 1776195,
+      "sha256": "8a5eecf77ddbfec6b60dacadb302692cac198eb547a4f4574b64c849c6d4b9c5"
+    },
+    "opt_train.jsonl": {
+      "bytes": 4026576,
+      "sha256": "272bb0775b0b441147a792cdb951dd146ecd96496def777f926a291b899e2317"
+    }
+  },
+  "schema_version": 2,
+  "scope": "development",
+  "seed": 42,
+  "sources": {
+    "redmadrobot/test.csv": {
+      "revision": "f77ea831274daf980cc45c61a93c226be9d978d6",
+      "sha256": "6bf544a380a3ee5bec94b946124bea3afaecce49e734679ad0f0c0e7c12977bb",
+      "url": "https://huggingface.co/datasets/redmadrobot-rnd/pii_benchmark/resolve/f77ea831274daf980cc45c61a93c226be9d978d6/test.csv"
+    }
+  },
+  "split_index_sha256": {
+    "development.json": "1c0e10273e32dc9f7ae8c8cea02e845cd0ef366f3867b577ef4493b734231f66"
+  },
+  "target_ratio": [
+    0.7,
+    0.3
+  ],
+  "uv_lock_sha256": "8cd27a3007b516d73e784607a6594e030bdebe246fb49ddb6b82e63ec5f7a6c1"
+}

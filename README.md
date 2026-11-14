@@ -23,11 +23,36 @@
 
 Подробно — в [дизайн-документе](docs/ml_system_design_doc.md).
 
+## ДЗ №2: данные, EDA и этапы решения
+
+Наработки подготовки данных адаптированы из отдельного репозитория этого же проекта.
+Теперь redmadrobot используется для разработки, а PII-Bench сохраняется для финальной
+оценки. Исходные тексты и веса в Git не входят.
+
+| Требование ДЗ №2 | Результат |
+|---|---|
+| EDA — 4 балла | [Выполненный ноутбук](notebooks/eda.ipynb), [отчёт с выводами](eda/report.md), графики и таблицы |
+| Подготовка данных — 2 балла | [Раздел 2.3, этап 1](docs/ml_system_design_doc.md#23-этапы-решения-задачи), [инструкция](data/README.md), код и фиксированные ID |
+| Подготовка моделей — 2 балла | Раздел 2.3, этап 2: детектор и методы сравнения, метрики, функция потерь, валидация и риски; анализ ошибок — этап 3 |
+| Специфичные этапы — 2 балла | Раздел 2.3, этапы 3–6: группировка ошибок, разработка нашего агента, проверка и применение исправлений, итоговое сравнение методов |
+
+Подготовлены 2 841 текст разработки и 1 810 текстов финальной оценки.
+Групповой development split: 1 978 `opt_train` / 863 `golden`, seed 42.
+Текущий golden ещё не покрывает все 13 целевых типов: выявленные пробелы и план
+пополнения описаны в EDA. Обучение, агент и сервис — следующие этапы; их качество
+в этой работе не измерялось.
+
 ## Структура репозитория
 
 ```text
 docs/ml_system_design_doc.md   дизайн-документ
-pyproject.toml                 метаданные проекта, зависимости и настройки ruff
+eda/                     отчёт, агрегаты, графики, манифесты и происхождение
+notebooks/eda.ipynb            EDA с сохранёнными результатами
+scripts/data/                 подготовка, группировка, аудит и проверка хешей
+data/README.md                инструкции и ограничения данных
+data/splits/                  фиксированные ID, группы и хеши текстов
+tests/test_benchmark_merge.py проверки данных и независимости оценки
+pyproject.toml, uv.lock        зависимости и их зафиксированные версии
 .pre-commit-config.yaml        хуки pre-commit
 ```
 
@@ -38,8 +63,27 @@ pyproject.toml                 метаданные проекта, зависи
 ```bash
 git clone https://github.com/Bolshoipudel/MLSD_PII_AGENT.git
 cd MLSD_PII_AGENT
-uv sync
+uv sync --locked --extra eda
 uv run pre-commit install
 ```
 
 Проверить весь репозиторий: `uv run pre-commit run --all-files`. Запустить линтер и форматтер вручную: `uv run ruff check .` и `uv run ruff format .`.
+
+Подготовка данных и выполнение EDA: [data/README.md](data/README.md).
+Короткий запуск после скачивания источников:
+
+```bash
+uv run --locked --extra eda python -m scripts.data.prepare
+uv run --locked --extra eda python -m scripts.data.prepare --scope evaluation
+uv run --locked --extra eda python -m scripts.data.audit
+uv run --locked --extra eda python -m scripts.data.eda
+uv run --locked --extra eda python -m scripts.data.run_notebook
+```
+
+Проверки без скачивания данных и моделей:
+
+```bash
+uv run --locked --extra eda python -m pytest -q
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+```

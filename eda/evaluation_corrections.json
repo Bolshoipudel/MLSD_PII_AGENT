@@ -1,0 +1,46 @@
+{
+  "annotation_scope_policy": "Labels outside label_scope are unknown, not negative gold.",
+  "canonical_types": [
+    "ADDRESS",
+    "CREDIT_CARD",
+    "CVC",
+    "EMAIL",
+    "INN",
+    "KPP",
+    "NAME",
+    "OGRN",
+    "OGRNIP",
+    "PASSPORT",
+    "PHONE",
+    "SNILS",
+    "TOKEN"
+  ],
+  "corrections": [],
+  "name_address_policy": "Preserve native granularity; no span aggregation.",
+  "revisions": {
+    "hivetrace": "cd6a18ace16daf23e79247ccf1e2b245d4054654"
+  },
+  "rows": 1810,
+  "rows_by_source": {
+    "hivetrace": 1810
+  },
+  "schema_version": "pii_sources_v2",
+  "scope": "evaluation",
+  "source_files": [
+    {
+      "bytes": 100083,
+      "file": "hivetrace/domain.parquet",
+      "sha256": "7ef3574273c0fe3a987981e38e32cd2764031a82766ca5b235bfccd1f27058eb"
+    },
+    {
+      "bytes": 78391,
+      "file": "hivetrace/entity.parquet",
+      "sha256": "6e0c77d566c2f04e7213917b26f1038336e28fc006551fac7a7f44f7627d5f96"
+    }
+  ],
+  "spans": 1667,
+  "spans_by_source": {
+    "hivetrace": 1667
+  },
+  "text_policy": "Original text unchanged; end offsets exclusive; Unicode code points."
+}

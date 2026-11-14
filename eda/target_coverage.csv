@@ -1,0 +1,14 @@
+target,development_native_types,status,opt_train_compatible_spans,opt_train_minimum_target,opt_train_additional_spans,golden_compatible_spans,golden_minimum_target,golden_additional_spans
+NAME,"FIRST_NAME,LAST_NAME,MIDDLE_NAME",different_granularity,0,200,200,0,100,100
+ADDRESS,"COUNTRY,REGION,DISTRICT,CITY,STREET,HOUSE",different_granularity,0,200,200,0,100,100
+PHONE,PHONE,compatible,116,200,84,57,100,43
+EMAIL,EMAIL,compatible,173,200,27,48,100,52
+CREDIT_CARD,CREDIT_CARD,compatible,141,200,59,62,100,38
+PASSPORT,PASSPORT,different_granularity,0,200,200,0,100,100
+INN,INN,compatible,184,200,16,79,100,21
+SNILS,SNILS,compatible,156,200,44,67,100,33
+CVC,,absent,0,200,200,0,100,100
+KPP,,absent,0,200,200,0,100,100
+OGRN,,absent,0,200,200,0,100,100
+OGRNIP,,absent,0,200,200,0,100,100
+TOKEN,,absent,0,200,200,0,100,100

@@ -1,0 +1,8 @@
+{
+  "interpretation": "Source overlap audit only. Zero heuristic matches does not prove semantic independence. No evaluation examples or predictions are exposed to optimization methods.",
+  "masked_template_cross_source_groups": 0,
+  "method": "grouped_masked_char5_jaccard_0.85_balanced_v1",
+  "near_template_cross_source_groups": 0,
+  "normalized_text_cross_source_groups": 0,
+  "semantic_independence_verified": false
+}

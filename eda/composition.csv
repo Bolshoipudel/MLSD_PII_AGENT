@@ -1,0 +1,7 @@
+scope,part,records,spans,positive_records,negative_records
+development,all,2841,5614,2470,371
+development,golden,863,1658,752,111
+development,opt_train,1978,3956,1718,260
+evaluation,all,1810,1667,1432,378
+evaluation,domain,900,757,522,378
+evaluation,entity,910,910,910,0
