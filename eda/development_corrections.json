@@ -1,0 +1,78 @@
+{
+  "annotation_scope_policy": "Labels outside label_scope are unknown, not negative gold.",
+  "canonical_types": [
+    "BIRTH_CERTIFICATE",
+    "CITY",
+    "COUNTRY",
+    "CREDIT_CARD",
+    "DISTRICT",
+    "DRIVER_LICENSE",
+    "EMAIL",
+    "FIRST_NAME",
+    "HOUSE",
+    "INN",
+    "IP_ADDRESS",
+    "LAST_NAME",
+    "MIDDLE_NAME",
+    "MILITARY_ID",
+    "OMS",
+    "PASSPORT",
+    "PHONE",
+    "REGION",
+    "SNILS",
+    "STREET",
+    "URL"
+  ],
+  "corrections": [
+    {
+      "end": 122,
+      "kind": "case_insensitive_alignment",
+      "original_id": "row_0",
+      "original_token": "WWW",
+      "source": "redmadrobot",
+      "start": 119,
+      "surface": "www",
+      "token_index": 31
+    },
+    {
+      "kind": "omit_empty_O_token_in_derived_alignment",
+      "original_id": "row_1431",
+      "original_token": "",
+      "source": "redmadrobot",
+      "tag": "O",
+      "token_index": 6
+    },
+    {
+      "end": 118,
+      "kind": "case_insensitive_alignment",
+      "original_id": "row_1628",
+      "original_token": "WWW",
+      "source": "redmadrobot",
+      "start": 115,
+      "surface": "www",
+      "token_index": 26
+    }
+  ],
+  "name_address_policy": "Preserve native granularity; no span aggregation.",
+  "revisions": {
+    "redmadrobot": "f77ea831274daf980cc45c61a93c226be9d978d6"
+  },
+  "rows": 2841,
+  "rows_by_source": {
+    "redmadrobot": 2841
+  },
+  "schema_version": "pii_sources_v2",
+  "scope": "development",
+  "source_files": [
+    {
+      "bytes": 3225069,
+      "file": "redmadrobot/test.csv",
+      "sha256": "6bf544a380a3ee5bec94b946124bea3afaecce49e734679ad0f0c0e7c12977bb"
+    }
+  ],
+  "spans": 5614,
+  "spans_by_source": {
+    "redmadrobot": 5614
+  },
+  "text_policy": "Original text unchanged; end offsets exclusive; Unicode code points."
+}
